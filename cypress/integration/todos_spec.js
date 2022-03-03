@@ -6,6 +6,10 @@ describe('Add new items', function() {
         cy.visit('/')
     })
 
+    afterEach(function () {
+        cy.screenshot()
+    })
+
     it('Add a new item', function(){
         cy.get('.new-todo').type('learn cypress')
     })
